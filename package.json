@@ -1,0 +1,39 @@
+{
+  "name": "dlg",
+  "displayName": "DLG",
+  "description": "DLG syntax highlighting",
+  "author": "SDesya74 <sdesya74@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hpmor-game/dlg-vscode-extension.git"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "dlg",
+        "aliases": [
+          "DLG",
+          "dlg"
+        ],
+        "extensions": [
+          ".dlg"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dlg",
+        "scopeName": "source.dlg",
+        "path": "./syntaxes/dlg.tmLanguage.json"
+      }
+    ]
+  }
+}

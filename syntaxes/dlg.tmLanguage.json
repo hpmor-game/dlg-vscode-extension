@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "DLG",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "begin": "//",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.dlg"
+            }
+          },
+          "end": "\\n",
+          "name": "comment.line.double-slash"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.dlg",
+          "match": "^:(menu|opt|end|event|move|back|if|elseif|else|endif)"
+        },
+        {
+          "name": "keyword.other.dlg",
+          "match": "#(\\S+)"
+        },
+        {
+          "name": "variable.dlg",
+          "match": "@(\\S+)*(\\:)?(\\S+)*"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.dlg"
+}
