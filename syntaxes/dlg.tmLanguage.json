@@ -27,16 +27,29 @@
     "keywords": {
       "patterns": [
         {
-          "name": "keyword.control.dlg",
+          "name": "entity.name.function.dlg",
           "match": "^:(menu|opt|end|event|move|back|if|elseif|else|endif)"
         },
         {
-          "name": "keyword.other.dlg",
-          "match": "#(\\S+)"
+          "name": "keyword.control.dlg",
+          "match": "#([\\w_][\\w_0-9]+)"
         },
         {
-          "name": "variable.dlg",
-          "match": "@(\\S+)*(\\:)?(\\S+)*"
+          "match": "(@)([\\w_][\\w_0-9]+)?(\\:?)([\\w_][\\w_0-9]+)?",
+          "captures": {
+            "1": {
+              "name": "keyword.other.dlg"
+            },
+            "2": {
+              "name": "keyword.other.dlg"
+            },
+            "3": {
+              "name": "variable.parameter.dlg"
+            },
+            "4": {
+              "name": "variable.parameter.dlg"
+            }
+          }
         }
       ]
     }
