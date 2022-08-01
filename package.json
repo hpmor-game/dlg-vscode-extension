@@ -26,7 +26,11 @@
         "extensions": [
           ".dlg"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/dlg-light.svg",
+          "dark": "./icons/dlg-dark.svg"
+        }
       }
     ],
     "grammars": [
